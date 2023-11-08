@@ -23,21 +23,19 @@
     <script>
         const loginForm = document.getElementById('loginForm');
 
-        // Check if user is already logged in and populate the login form
+        
         const savedUsername = localStorage.getItem('username');
         if (savedUsername) {
             loginForm.username.value = savedUsername;
         }
 
-        // Event listener for the login form submission
+        
         loginForm.addEventListener('submit', (event) => {
             event.preventDefault();
             const username = loginForm.username.value;
             const password = loginForm.password.value;
 
-            // Check for authentication, and if successful, save the username
-            // in localStorage
-            // Replace this with your actual authentication logic
+        
             if (username === 'yourUsername' && password === 'yourPassword') {
                 localStorage.setItem('username', username);
                 alert('Đăng nhập thành công');
